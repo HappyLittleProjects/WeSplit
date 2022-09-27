@@ -74,7 +74,9 @@ struct ContentView: View {
                             .padding([.leading, .trailing])
                         HStack{
                             Text("Total: \t\t")
+                                .foregroundColor(tipPercentage == 0 ? .red : .gray)
                             Text(checkAmount + tip, format: .currency(code: Locale.current.currencyCode ?? "USD"))
+                                .foregroundColor(tipPercentage == 0 ? .red : .gray)
                         }
                     }
                 }
